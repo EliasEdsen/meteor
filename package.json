@@ -1,6 +1,6 @@
 {
-  "name": "Spiderweb",
-  "description": "Just easy game",
+  "name": "Meteor",
+  "description": "Code example on meteor",
   "version": "1.0.0",
   "scripts": {
     "start": "meteor run"
