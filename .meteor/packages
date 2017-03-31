@@ -25,3 +25,4 @@ mizzao:bootstrap-3
 tsega:bootstrap3-datetimepicker
 session
 momentjs:moment
+iron:router
