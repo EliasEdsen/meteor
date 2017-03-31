@@ -1,11 +1,6 @@
-import { Template } from 'meteor/templating';
-import { ReactiveVar } from 'meteor/reactive-var';
-
-import './main.jade'
-
-
-
 Meteor.startup () ->
+  Meteor.subscribe 'auctions'
+
   Meteor.call 'getServerTime', (err, res) ->
     if (err) then throw new Meteor.Error(err)
     Session.set('time', res + 1000)
@@ -15,7 +10,7 @@ Meteor.startup () ->
     , 1000
 
 Template.auctions.helpers
-  auction: -> Auctions.find()
+  auction: -> Auctions.find({}, {sort: {price: 1}})
 
 
 
